@@ -1,6 +1,6 @@
 //! A lightweight, `#![no_std]` implementation of the Serial Line CAN protocol.
 
-#![doc(html_root_url = "https://docs.rs/mini-slcan/0.0.0")]
+#![doc(html_root_url = "https://docs.rs/mini-slcan/0.1.0")]
 // Deny a few warnings in doctests, since rustdoc `allow`s many warnings by default
 #![doc(test(attr(deny(unused_imports, unused_must_use))))]
 #![warn(missing_debug_implementations, rust_2018_idioms)]
