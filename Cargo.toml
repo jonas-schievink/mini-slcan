@@ -7,7 +7,7 @@ description = "Serial Line CAN (SLCAN) protocol decoder/encoder"
 documentation = "https://docs.rs/mini-slcan/"
 repository = "https://github.com/jonas-schievink/mini-slcan.git"
 keywords = ["canusb", "usbcan", "codec"]
-categories = ["no_std", "embedded"]
+categories = ["no-std", "embedded"]
 readme = "README.md"
 license = "0BSD"
 
