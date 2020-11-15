@@ -24,6 +24,4 @@ crate's functionality.
 
 ## Rust version support
 
-This crate supports at least the 3 latest stable Rust releases. Bumping the
-minimum supported Rust version (MSRV) is not considered a breaking change as
-long as these 3 versions are still supported.
+This crate supports stable Rust. No guarantees are made beyond that.
