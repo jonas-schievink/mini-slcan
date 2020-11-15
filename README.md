@@ -16,7 +16,7 @@ Add an entry to your `Cargo.toml`:
 
 ```toml
 [dependencies]
-mini-slcan = "0.1.0"
+mini-slcan = "0.1.1"
 ```
 
 Check the [API Documentation](https://docs.rs/mini-slcan/) for how to use the
