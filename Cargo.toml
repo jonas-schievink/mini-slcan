@@ -1,0 +1,58 @@
+[package]
+name = "mini-slcan"
+version = "0.0.0"
+authors = ["Jonas Schievink <jonasschievink@gmail.com>"]
+edition = "2018"
+description = "Serial Line CAN (SLCAN) protocol decoder/encoder"
+documentation = "https://docs.rs/mini-slcan/"
+repository = "https://github.com/jonas-schievink/mini-slcan.git"
+keywords = ["canusb", "usbcan", "codec"]
+categories = ["no_std", "embedded"]
+readme = "README.md"
+license = "0BSD"
+
+[badges]
+maintenance = { status = "actively-developed" }
+
+[dependencies]
+bitflags = "1.2.1"
+defmt = "0.1.0"
+
+[features]
+defmt-default = []
+defmt-trace = []
+defmt-debug = []
+defmt-info = []
+defmt-warn = []
+defmt-error = []
+
+# cargo-release configuration
+[package.metadata.release]
+tag-message = "{{version}}"
+no-dev-version = true
+pre-release-commit-message = "Release {{version}}"
+
+# Change the changelog's `Unreleased` section to refer to this release and
+# prepend a new `Unreleased` section
+[[package.metadata.release.pre-release-replacements]]
+file    = "CHANGELOG.md"
+search  = "## Unreleased\n"
+replace = """
+## Unreleased
+
+No changes.
+
+## [{{version}} - {{date}}](https://github.com/jonas-schievink/mini-slcan/releases/tag/v{{version}})
+"""
+
+# Bump the version inside the example manifest in `README.md`
+[[package.metadata.release.pre-release-replacements]]
+file    = "README.md"
+search  = 'mini-slcan = "[a-z0-9\\.-]+"'
+replace = 'mini-slcan = "{{version}}"'
+
+# Bump the version referenced by the `html_root_url` attribute in `lib.rs`
+[[package.metadata.release.pre-release-replacements]]
+file    = "src/lib.rs"
+search  = "https://docs.rs/mini-slcan/[a-z0-9\\.-]+"
+replace = "https://docs.rs/mini-slcan/{{version}}"
